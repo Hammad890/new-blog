@@ -1,13 +1,19 @@
 import './App.css';
-import Header from './header';
-import Content from './content';
+import Homepage from './pages/homepage.jsx';
+import Login from './pages/login.jsx';
+import Register from './pages/register.jsx';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+
 
 function App() {
   return (
-    <>
-    <Header/>
-    <Content/>
-    </>
+    <Router>
+    <Routes>
+     <Route path="/" element={<Homepage/>}/>
+    <Route path="/login" element={<Login/>}/>
+    <Route path="/register" element={<Register/>}/>
+    </Routes>
+    </Router>
   )
 }
 

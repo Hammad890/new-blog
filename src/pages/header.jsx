@@ -25,12 +25,22 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:gap-x-12">
+        {/* {username &&( */}
+              <>
+                <a href="/create"  className="text-sm font-semibold text-gray-900 hover:text-indigo-600">Create new post</a>
+                <a href="/"  className="text-sm font-semibold text-gray-900 hover:text-indigo-600" onClick>Logout </a>
+              </>
+          {/* )} */}
+          {/* {!username && ( */}
+            <>
           <a href="/login" className="text-sm font-semibold text-gray-900 hover:text-indigo-600">
             Login
           </a>
           <a href="/register" className="text-sm font-semibold text-gray-900 hover:text-indigo-600">
             Register
           </a>
+          </>
+          {/* )} */}
           <a href="/about-us" className="text-sm font-semibold text-gray-900 hover:text-indigo-600">
             About Us
           </a>
